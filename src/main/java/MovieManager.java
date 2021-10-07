@@ -35,13 +35,10 @@ public class MovieManager {
 
     public Film[] showFilm() {
         for (int i = films.length - 1, x = 0; i >= 0; i--, x++) {
-            if (billboard[i] == null) {
-                billboard[i] = films[x];
-
-            }
-
+            billboard[i] = films[x];
         }
         return billboard;
+
     }
 
 }
