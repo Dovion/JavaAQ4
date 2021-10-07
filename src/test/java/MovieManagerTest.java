@@ -51,9 +51,7 @@ class MovieManagerTest {
         for (int i = 0; i < films.length; i++) {
             managerTest.addFilm(films[i]);
         }
-        for (int i = 0; i < films.length; i++) {
-            managerTest.showFilm(managerTest.films[i]);
-        }
+        managerTest.showFilm();
         boolean isEquals = true;
         for (int i = 0; i < films.length; i++) {
             Film x = films[i];
@@ -96,9 +94,7 @@ class MovieManagerTest {
         for (int i = 0; i < resultLengthLow; i++) {
             managerTestLengthLow.addFilm(films[i]);
         }
-        for (int i = 0; i < resultLengthLow; i++) {
-            managerTestLengthLow.showFilm(managerTestLengthLow.films[i]);
-        }
+        managerTestLengthLow.showFilm();
         boolean isEquals = true;
         for (int i = 0; i < resultLengthLow; i++) {
             Film x = films[i];
@@ -141,9 +137,7 @@ class MovieManagerTest {
         for (int i = 0; i < resultLengthMedium; i++) {
             managerTestLengthMedium.addFilm(films[i]);
         }
-        for (int i = 0; i < resultLengthLow; i++) {
-            managerTestLengthMedium.showFilm(managerTestLengthMedium.films[i]);
-        }
+        managerTestLengthMedium.showFilm();
         boolean isEquals = true;
         for (int i = 0; i < resultLengthLow; i++) {
             Film x = films[i];
@@ -186,9 +180,7 @@ class MovieManagerTest {
         for (int i = 0; i < resultLengthHigh; i++) {
             managerTestLengthHigh.addFilm(films[i]);
         }
-        for (int i = 0; i < resultLengthHigh; i++) {
-            managerTestLengthHigh.showFilm(managerTestLengthHigh.films[i]);
-        }
+        managerTestLengthHigh.showFilm();
         boolean isEquals = true;
         for (int i = 0; i < resultLengthHigh; i++) {
             Film x = films[i];

@@ -24,15 +24,6 @@ public class MovieManager {
         this.billboard = y;
     }
 
-//    public int getShowLength() {
-//        if (showLength <= 0) {
-//            this.showLength = 0;
-//        } else if (showLength >= 10) {
-//            this.showLength = 10;
-//        }
-//        return this.showLength;
-//    }
-
     public void addFilm(Film film) {
         for (int i = 0; i < films.length; i++) {
             if (films[i] == null) {
@@ -42,14 +33,15 @@ public class MovieManager {
         }
     }
 
-    public void showFilm(Film film) {
-        for (int i = films.length - 1; i >= 0; i--) {
+    public Film[] showFilm() {
+        for (int i = films.length - 1, x = 0; i >= 0; i--, x++) {
             if (billboard[i] == null) {
-                billboard[i] = film;
-                return;
+                billboard[i] = films[x];
+
             }
 
         }
-
+        return billboard;
     }
+
 }
