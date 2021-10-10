@@ -2,13 +2,10 @@
 public class MovieManager {
     public int showLength = 10;
     public Film[] films;
-    public Film[] billboard;
 
     public MovieManager() {
         Film[] x = new Film[showLength];
-        Film[] y = new Film[x.length];
         this.films = x;
-        this.billboard = y;
     }
 
     public MovieManager(int showLength) {
@@ -18,10 +15,8 @@ public class MovieManager {
             showLength = 10;
         }
         Film[] x = new Film[showLength];
-        Film[] y = new Film[x.length];
         this.showLength = showLength;
         this.films = x;
-        this.billboard = y;
     }
 
     public void addFilm(Film film) {
@@ -31,13 +26,18 @@ public class MovieManager {
                 return;
             }
         }
+
     }
 
     public Film[] showFilm() {
+        Film[] temp = new Film[films.length];
         for (int i = films.length - 1, x = 0; i >= 0; i--, x++) {
-            billboard[i] = films[x];
+            temp[i] = films[x];
         }
-        return billboard;
+        for (int i = 0; i < films.length; i++) {
+            films[i] = temp[i];
+        }
+        return films;
 
     }
 
